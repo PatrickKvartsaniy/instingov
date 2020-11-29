@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <title>Institute of Innovative Governance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+
+    <!-- Scripts -->
+    {% comment %} <script src="{% static '/js/app.js' %}"></script> {% endcomment %}
+
+
+    <!-- Styles -->
+    <link rel="shortcut icon" href="{% static '/images/favicon.png'%}" type="image/x-icon"/>    <!-- Favicon -->
+
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="{% static '/css/deps/pace-theme-flash.css'%}" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="{% static '/css/deps/bootstrap.min.css'%}" rel="stylesheet" type="text/css"/>
+    <link href="{% static '/css/deps/bootstrap-theme.min.css'%}" rel="stylesheet" type="text/css"/>
+    <link href="{% static '/fonts/font-awesome/css/font-awesome.css'%}" rel="stylesheet" type="text/css"/>
+    <link href="{% static '/css/deps/animate.min.css'%}" rel="stylesheet" type="text/css"/>
+    <link href="{% static '/css/deps/perfect-scrollbar.min.css'%}" rel="stylesheet" type="text/css"/>
+    <link href="{% static '/css/deps/datepicker.css'%}" rel="stylesheet" type="text/css" media="screen"/>
+    <!-- CORE CSS FRAMEWORK - END -->
+
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css"/>
+    {% comment %} <link href="{% static '/css/deps/app.css' %}" rel="stylesheet" type="text/css"/> {% endcomment %}
+    <link href="{% static '/css/deps/style_pen.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static '/css/main.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static '/css/footer.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static '/css/responsive.css' %}" rel="stylesheet" type="text/css"/>
+    <!-- CORE CSS TEMPLATE - END -->
+  </head>
+
+  <body
+    style="font-family: 'Work Sans', sans-serif !important"
+    class="post-template-default single single-post postid-70 single-format-standard custom-background wp-custom-logo header-sticky penci_enable_ajaxsearch penci_sticky_content_sidebar penci_dis_padding_bw sidebar-right penci-single-style-1 wpb-js-composer js-comp-ver-5.4.5 vc_responsive"
+  >
+    {% include 'components/header.html' %} 
+    
+    {%block content%} {%endblock%} 
+
+    {% include 'components/footer.html' %} 
+    {% include 'components/modal.html' %} 
+    {% include 'components/scripts.html' %}
+  </body>
+</html>
