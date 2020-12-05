@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Area
 
-def index(request):
-    return render(request, 'areas/index.html')
+def area(request, area_title):
+    area = Area.objects.get(title=area_title)
+    return render(request, 'areas/area.html', {'area':area})
