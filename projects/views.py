@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Project
 
-def index(request):
-    return render(request, 'projects/index.html')
+def project(request, project_title):
+    project = Project.objects.get(title=project_title)
+    return render(request, 'projects/project.html', {'project':project})

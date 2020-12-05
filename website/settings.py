@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'projects',
+    'about',
+    'areas',
+    'contact',
+    'landing',
+    'news'
 ]
 
 MIDDLEWARE = [
@@ -62,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'website.context_processor.get_projects_to_context',
             ],
         },
     },
@@ -120,6 +127,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/images/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')

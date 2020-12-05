@@ -1,0 +1,37 @@
+{% extends 'components/base.html' %}
+
+
+{%block content%}
+<div id="content" class="site-content" style="transform: none;">
+
+    {% include 'components/hero.html' with hero_image_url=project.image.url %}
+    <div id="primary" class="content-area" style="transform: none;">
+        <main id="main" class="site-main" style="transform: none; line-height: 2.5;">
+            <div class="penci-container" style="transform: none;">
+                <aside class="widget-area widget-area-1 penci-sticky-sidebar penci-sidebar-widgets"
+                        style="position: relative; overflow: visible; margin-bottom: 20px; box-sizing: border-box; min-height: 1px;">
+
+                    <div style="margin-left: 70px;">
+                        <div class="theiaStickySidebar"
+                                style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
+                            {% comment %} @include('site.blog.post.sidebar.elements.series') {% endcomment %}
+                        </div>
+                    </div>
+                </aside> 
+                <div style="max-width: 750px; margin-left: 50px; margin-right: 50px; text-align: justify; color: #454545; font-size: 1.8rem;">
+                    {{project.description}}
+                </div>
+            </div>
+
+            <div class="widget  penci-block-vc penci-widget-sidebar style-title-3 style-title-left widget_categories">
+                <div class="penci-block-heading">
+                    <h4 class="widget-title penci-block__title">
+                    </h4>
+                </div>
+            </div>         
+        </div>
+        </main>
+    </div><!-- #primary -->
+</div><!-- #content -->
+
+{% endblock %}
