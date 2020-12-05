@@ -7,4 +7,5 @@ urlpatterns = [
     path('areas/', include('areas.urls')),
     path('admin/', admin.site.urls),
     path('about/', include('about.urls')),
+    path('contact/', include('contact.urls')),
 ]
