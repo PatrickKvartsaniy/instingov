@@ -7,6 +7,8 @@ urlpatterns = [
     path('', include('landing.urls')),
     path('projects/', include('projects.urls')),
     path('areas/', include('areas.urls')),
+    path('jet/', include('jet.urls', 'jet')),
+    path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
     path('admin/', admin.site.urls),
     path('about/', include('about.urls')),
     path('contact/', include('contact.urls')),

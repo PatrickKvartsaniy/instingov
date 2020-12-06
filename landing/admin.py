@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import SiteContent, Subscriber
+
+admin.site.register(SiteContent)
+admin.site.register(Subscriber)

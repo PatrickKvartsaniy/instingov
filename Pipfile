@@ -9,6 +9,8 @@ verify_ssl = true
 django = "*"
 pylint = "*"
 pillow = "*"
+django-3-jet = "*"
+django-phonenumber-field = "*"
 
 [requires]
 python_version = "3.7"

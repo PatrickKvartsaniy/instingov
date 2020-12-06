@@ -1,8 +1,8 @@
 {% extends 'components/base.html'%}
 
 {%block content%}
+    {% include 'components/hero.html' %}
     <div id="page" class="site" style="transform: none;">
-
         <div id="content" class="site-content" style="transform: none;">
             <div id="primary" class="content-area" style="transform: none;">
                 <main id="main" class="site-main" style="transform: none;">
@@ -48,27 +48,19 @@
                                                                     <p></p>
                                                                     <div class="penci-col-6">
                                                                         <ul>
-                                                                            <li><strong>Address:</strong> Rue Limauge
-                                                                                13A, 1050 Brussels
-                                                                            </li>
-                                                                            <li><strong>Phone Number:</strong> +32
-                                                                                493032984
-                                                                            </li>
+                                                                            <li><strong>Address:</strong>{{contacts.0.adress}}</li>
+                                                                            <li><strong>Phone Number:</strong>{{contacts.0.phone}}</li>
                                                                             <li><strong>Email:</strong>
-                                                                                <a href="mailto:anna.melenchuk@instingov.org">anna.melenchuk@instingov.org</a>
+                                                                                <a href="mailto:{{contacts.0.email}}">{{contacts.0.email}}</a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
                                                                     <div class="penci-col-6">
-                                                                        <ul>
-                                                                            <li><strong>Address:</strong> Tohu 3, 12012
-                                                                                Tallinn, Estonia
-                                                                            </li>
-                                                                            <li><strong>Phone Number:</strong> +32
-                                                                                493032984
-                                                                            </li>
+                                                                       <ul>
+                                                                            <li><strong>Address:</strong>{{contacts.1.adress}}</li>
+                                                                            <li><strong>Phone Number:</strong>{{contacts.1.phone}}</li>
                                                                             <li><strong>Email:</strong>
-                                                                                <a href="mailto:oleksandra.kuzminska@instingov.org">oleksandra.kuzminska@instingov.org</a>
+                                                                                <a href="mailto:{{contacts.0.email}}">{{contacts.1.email}}</a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>

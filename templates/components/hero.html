@@ -6,7 +6,11 @@
 <div class="hero">
     <div class="hero-inner wrap">
         <div class="hero__picture-outer" style="background-color:#b3cde0;пл">
+        {% if hero_image_url %}
             <img style="max-width: 100%; height: auto" src="{{hero_image_url}}">
+        {% else %}
+            <img style="max-width: 100%; height: auto" src="{{content.0.main_photo.url}}">
+        {% endif %}
         </div>
         <div class="hero__content">
             <div class="hero__content__headline" data-ref="hero.headline" style="opacity: 1; ">
