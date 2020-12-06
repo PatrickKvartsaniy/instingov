@@ -13,6 +13,9 @@ class SiteContent(models.Model):
     def __str__(self):
         return self.lang
 
+    class Meta:
+        verbose_name_plural = "Site Content"
+
 class Subscriber(models.Model):
     name = models.CharField(max_length=50, null=True)
     email = models.EmailField(max_length=254)

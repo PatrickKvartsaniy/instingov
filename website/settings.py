@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'about',
     'areas',
     'contact',
-    'landing',
+    'main',
     'news'
 ]
 

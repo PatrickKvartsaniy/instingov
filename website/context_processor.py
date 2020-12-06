@@ -1,7 +1,7 @@
 from projects.models import Project
 from areas.models import Area
 from contact.models import Contact
-from landing.models import SiteContent
+from main.models import SiteContent
 
 def get_projects_to_context(request):
     projects = Project.objects.all()
