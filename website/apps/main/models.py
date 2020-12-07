@@ -8,7 +8,7 @@ class SiteContent(models.Model):
         ('Ukrainian', "Ukrainian")
     ) 
     lang = models.CharField(max_length=10, choices=languages)
-    main_photo = models.ImageField(upload_to='uploaded',blank=True, null=True)
+    main_photo = models.ImageField(upload_to='uploaded/site',blank=True, null=True)
     
     def __str__(self):
         return self.lang
