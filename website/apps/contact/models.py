@@ -7,7 +7,7 @@ class Contact(models.Model):
     adress = models.CharField(max_length=50, null=True)
     phone = PhoneNumberField()
     email = models.EmailField(max_length=254)
-    contact_person = models.OneToOneField(User, null=True, on_delete=models.CASCADE, blank=True)
+    contact_person = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.adress

@@ -1,0 +1,50 @@
+{% extends 'components/base.html' %}
+
+
+{%block content%}
+    <div id="page" class="site" style="transform: none;">
+
+        <div id="content" class="site-content" style="transform: none;">
+            <div id="primary" class="content-area" style="transform: none;">
+                <main id="main" class="site-main" style="transform: none;">
+                    <div class="penci-container" style="transform: none;">
+                        <div class="penci-container__content penci-con_sb2_sb1" style="transform: none;">
+                            <div class="penci-wide-content penci-content-novc penci-sticky-content penci-content-single-inner"
+                                 style="position: relative; overflow: visible; margin-bottom: 20px; box-sizing: border-box; min-height: 1px;">
+                                <div class="theiaStickySidebar"
+                                     style="padding-top: 1px; padding-bottom: 1px; position: static; transform: none;">
+                                    <div class="penci-content-post noloaddisqus "
+                                         data-url="http://pennews.pencidesign.com/pennews-web-hosting-service-multipurpose/the-paths-3-engineers-took-to-their-first-community-tutorial/"
+                                         data-id="70" data-title="">
+                                        <article id="post-70"
+                                                class="penci-single-artcontent noloaddisqus post-70 post type-post status-publish format-standard has-post-thumbnail hentry category-process tag-blog tag-hosting tag-pennews penci-post-item">
+
+                                            {% include 'components/article_header.html' %}
+
+                                            <div class="entry-media penci-entry-media">
+                                                <div class="post-format-meta ">
+                                                    <div class="post-image penci-standard-format">
+                                                        <img width="960"
+                                                            height="640"
+                                                            src="{{article.image.url}}"
+                                                            class="attachment-penci-thumb-960-auto size-penci-thumb-960-auto wp-post-image"
+                                                            alt=""
+                                                            srcset=""
+                                                            sizes="(max-width: 960px) 100vw, 960px">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="font-size: 20px !important;" class="penci-entry-content entry-content">
+                                                {{article.description}}
+                                            </div><!-- .entry-content -->
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </main><!-- #main -->
+            </div><!-- #primary -->
+        </div><!-- #content -->
+{% endblock %}

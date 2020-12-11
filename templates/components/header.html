@@ -52,7 +52,7 @@
               <ul class="sub-menu">
                 {% for area in areas %}
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-312">
-                  <a href="/areas/{{area.title}}">{{area.title}}</a>
+                  <a href="/areas/{{area.title_to_url}}">{{area.title}}</a>
                 </li>
                {% endfor %}
               </ul>
@@ -76,7 +76,7 @@
               <ul class="sub-menu">
                 {% for project in projects %}
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-312">
-                  <a href="/projects/{{project.title}}">{{project.title}}</a>
+                  <a href="/projects/{{project.title_to_url}}">{{project.title}}</a>
                 </li>
                {% endfor %}
               </ul>

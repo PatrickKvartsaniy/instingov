@@ -8,3 +8,6 @@ class Area(models.Model):
 
     def __str__(self):
         return self.title
+
+    def title_to_url(self):
+        return self.title.replace(' ','-')
