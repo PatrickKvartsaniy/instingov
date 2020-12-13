@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from django.http import Http404, HttpResponseRedirect
+
+from website.apps.news.models import Post
 
 from .models import Subscriber
 
-from website.apps.news.models import Post
 
 def index(request):
     return render(request, 'main/index.html')

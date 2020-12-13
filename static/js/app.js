@@ -14,6 +14,22 @@ $(document).ready(function(){
 		}
 	}
 
+	function switchLanguage(){
+		document.cookie = document.cookie + "language=" + this.language
+	}
+
+	document.getElementById("lang-ua").onclick = function(){
+		
+	}
+	ua.element.onclick = function(){switchLanguage()}
+
+	const eng = {
+		element: document.getElementById("lang-eng"),
+		langueage: "eng",
+	}
+	eng.element.onclick = function(){switchLanguage()}
+	
+
 	function initSwitchToggleShowHide(input_field){
 		var show_hide_field = input_field+'_field';
 		if($('input[name="'+input_field+'"]').is(':checked'))

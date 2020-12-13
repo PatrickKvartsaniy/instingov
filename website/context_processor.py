@@ -9,5 +9,5 @@ def get_projects_to_context(request):
     areas_of_work = Area.objects.all()
     contacts = Contact.objects.all()
     content  = SiteContent.objects.all()
-    posts = Post.objects.all()
+    posts = Post.objects.all() 
     return {'projects':projects, 'areas':areas_of_work, 'contacts':contacts, 'content':content, 'news':posts}
