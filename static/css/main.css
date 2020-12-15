@@ -122,7 +122,8 @@ body, button, input, select, textarea, .woocommerce ul.products li.product .butt
 }
 
 .site-header.header--s7 .custom-logo, .site-header.header--s10 .custom-logo, .site-header.header--s11 .custom-logo, .site-header.header--s1 .custom-logo, .site-header.header--s5 .custom-logo {
-    max-height: 100px;
+    max-height: 90px;
+    /* logo */
 }
 
 .main-navigation a, .mobile-sidebar .primary-menu-mobile li a, .penci-menu-hbg .primary-menu-mobile li a {
@@ -134,7 +135,8 @@ body, button, input, select, textarea, .woocommerce ul.products li.product .butt
 }
 
 .main-navigation > ul:not(.children) > li > a {
-    font-size: 24px;
+    font-size: 22px;  
+    /* titles */
 }
 
 .main-navigation a {

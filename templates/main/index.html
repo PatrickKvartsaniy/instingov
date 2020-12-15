@@ -15,7 +15,7 @@
                         <div class="vc_column-inner wpb_column vc_column_container vc_col-sm-12 penci-col-12 vc_custom_1551392052653">
                             <div class="wpb_wrapper">
                                 <div class="penci-fancy-heading-inner">
-                                    <h2 class="penci-heading-title">Our Latest News</h2>
+                                    <h2 class="penci-heading-title">{{titles.news_latest}}</h2>
                                     <div class="penci-separator penci-separator- penci-separator-align-center"><span
                                                 class="penci-sep_holder penci-sep_holder_l"><span
                                                     class="penci-sep_line"></span></span><span
@@ -32,31 +32,59 @@
                                         <div class="penci-block_content__items penci-block-items__1">
                                             {% for post in news %}
                                                 <article class="penci-post-item__{{post.id}} hentry penci-post-item">
-                                                    <div class="penci_post_thumb">
-                                                        <a class="penci-image-holder  penci-lazy penci-image_has_icon"
-                                                           data-delay=""
-                                                           href="/news/{{post.title_to_url}}"
-                                                           title="{{post.title}}"
-                                                           style="display: block; background-image: url({{post.image.url}});"></a>
-                                                        <div class="entry-meta-item penci-post-cat">
-                                                            <a class="penci-cat-name"
-                                                               href="/areas/{{post.area.title_to_url}}"
-                                                               title="View all news in {{post.area.title}}">{{post.area.title}}</a>
+                                                    {% if request.session.language == 'ua' %}
+                                                        <div class="penci_post_thumb">
+                                                            <a class="penci-image-holder  penci-lazy penci-image_has_icon"
+                                                            data-delay=""
+                                                            href="/news/{{post.title_to_url}}"
+                                                            title="{{post.title_ua}}"
+                                                            style="display: block; background-image: url({{post.image.url}});"></a>
+                                                            <div class="entry-meta-item penci-post-cat">
+                                                                <a class="penci-cat-name"
+                                                                href="/areas/{{post.area.title_to_url}}"
+                                                                title="View all news in {{post.area.title_ua}}">{{post.area.title_ua}}</a>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="penci_post_content">
-                                                        <h3 class="penci__post-title entry-title">
-                                                            <a href="news/{{post.title_to_url}}"
-                                                               title="{{post.title}}">
-                                                                {{post.title}}</a>
-                                                        </h3>
-                                                        <div class="penci_post-meta">
-                                                                <span class="entry-meta-item penci-posted-on">
-                                                                    <i class="fa fa-clock-o"></i>
-                                                                    <time class="entry-date published" datetime="{{post.date_created}}">{{post.date_created}}</time>
-                                                                </span>
+                                                        <div class="penci_post_content">
+                                                            <h3 class="penci__post-title entry-title">
+                                                                <a href="news/{{post.title_to_url}}"
+                                                                title="{{post.title_ua}}">
+                                                                    {{post.title_ua}}</a>
+                                                            </h3>
+                                                            <div class="penci_post-meta">
+                                                                    <span class="entry-meta-item penci-posted-on">
+                                                                        <i class="fa fa-clock-o"></i>
+                                                                        <time class="entry-date published" datetime="{{post.date_created}}">{{post.date_created}}</time>
+                                                                    </span>
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                    {%else%}
+                                                        <div class="penci_post_thumb">
+                                                            <a class="penci-image-holder  penci-lazy penci-image_has_icon"
+                                                            data-delay=""
+                                                            href="/news/{{post.title_to_url}}"
+                                                            title="{{post.title}}"
+                                                            style="display: block; background-image: url({{post.image.url}});"></a>
+                                                            <div class="entry-meta-item penci-post-cat">
+                                                                <a class="penci-cat-name"
+                                                                href="/areas/{{post.area.title_to_url}}"
+                                                                title="View all news in {{post.area.title}}">{{post.area.title}}</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="penci_post_content">
+                                                            <h3 class="penci__post-title entry-title">
+                                                                <a href="news/{{post.title_to_url}}"
+                                                                title="{{post.title}}">
+                                                                    {{post.title}}</a>
+                                                            </h3>
+                                                            <div class="penci_post-meta">
+                                                                    <span class="entry-meta-item penci-posted-on">
+                                                                        <i class="fa fa-clock-o"></i>
+                                                                        <time class="entry-date published" datetime="{{post.date_created}}">{{post.date_created}}</time>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    {% endif %}
                                                 </article>
                                             {% endfor %}
                                         </div>
@@ -94,7 +122,7 @@
                                         <br>
                                         <br>
                                         <div class="penci-fancy-heading-inner">
-                                            <h2 class="penci-heading-title">Our Latest Projects</h2>
+                                            <h2 class="penci-heading-title">{{titles.projects_latest}}</h2>
                                             <div class="penci-separator penci-separator- penci-separator-align-center"><span
                                                         class="penci-sep_holder penci-sep_holder_l"><span
                                                             class="penci-sep_line"></span></span><span
@@ -114,31 +142,59 @@
                                                 <div class="penci-block-wrapper-item">
                                                     <div class="block23_items">
                                                        {% for project in projects %}
-                                                            <article class="hentry penci-post-item">
-                                                                <div class="penci_post_thumb">
-                                                                    <a class="penci-image-holder  penci-lazy penci-image_has_icon"
-                                                                       data-delay=""
-                                                                       href="/projects/{{project.title_to_url}}"
-                                                                       title="{{project.title}}"
-                                                                       style="display: block; background-image: url({{project.image.url}});"> 
-                                                                    </a>
-                                                                </div>
-                                                                <div class="penci_post_content">
-                                                                    <h3 class="penci__post-title entry-title">
-                                                                        <a style="font-size: 18px !important;"
-                                                                           href="/projects/{{project.title_to_url}}"
-                                                                           title="{{project.title}}">
-                                                                            <b>{{project.title}}</b>
+                                                            {% if request.session.language == 'ua' %}
+                                                                <article class="hentry penci-post-item">
+                                                                    <div class="penci_post_thumb">
+                                                                        <a class="penci-image-holder  penci-lazy penci-image_has_icon"
+                                                                        data-delay=""
+                                                                        href="/projects/{{project.title_to_url}}"
+                                                                        title="{{project.title_ua}}"
+                                                                        style="display: block; background-image: url({{project.image.url}});"> 
                                                                         </a>
-                                                                    </h3>
-                                                                    <div class="penci_post-meta">
-                                                                            <span class="entry-meta-item penci-posted-on">
-                                                                                <i class="fa fa-clock-o"></i>
-                                                                                <time class="entry-date published" datetime="{{project.date_created}}">{{project.date_created}}</time>
-                                                                            </span>
                                                                     </div>
-                                                                </div>
-                                                            </article>
+                                                                    <div class="penci_post_content">
+                                                                        <h3 class="penci__post-title entry-title">
+                                                                            <a style="font-size: 18px !important;"
+                                                                            href="/projects/{{project.title_to_url}}"
+                                                                            title="{{project.title_ua}}">
+                                                                                <b>{{project.title_ua}}</b>
+                                                                            </a>
+                                                                        </h3>
+                                                                        <div class="penci_post-meta">
+                                                                                <span class="entry-meta-item penci-posted-on">
+                                                                                    <i class="fa fa-clock-o"></i>
+                                                                                    <time class="entry-date published" datetime="{{project.date_created}}">{{project.date_created}}</time>
+                                                                                </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </article>
+                                                                {% else %}
+                                                                    <article class="hentry penci-post-item">
+                                                                        <div class="penci_post_thumb">
+                                                                            <a class="penci-image-holder  penci-lazy penci-image_has_icon"
+                                                                            data-delay=""
+                                                                            href="/projects/{{project.title_to_url}}"
+                                                                            title="{{project.title}}"
+                                                                            style="display: block; background-image: url({{project.image.url}});"> 
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="penci_post_content">
+                                                                            <h3 class="penci__post-title entry-title">
+                                                                                <a style="font-size: 18px !important;"
+                                                                                href="/projects/{{project.title_to_url}}"
+                                                                                title="{{project.title}}">
+                                                                                    <b>{{project.title}}</b>
+                                                                                </a>
+                                                                            </h3>
+                                                                            <div class="penci_post-meta">
+                                                                                    <span class="entry-meta-item penci-posted-on">
+                                                                                        <i class="fa fa-clock-o"></i>
+                                                                                        <time class="entry-date published" datetime="{{project.date_created}}">{{project.date_created}}</time>
+                                                                                    </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </article>
+                                                                {% endif %}
                                                         {% endfor %}
                                                     </div>
                                                 </div>

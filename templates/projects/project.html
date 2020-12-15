@@ -19,7 +19,11 @@
                     </div>
                 </aside> 
                 <div style="max-width: 750px; margin-left: 50px; margin-right: 50px; text-align: justify; color: #454545; font-size: 1.8rem;">
-                    {{project.description}}
+                    {% if request.session.language == 'ua'%}
+                        {{project.description_ua}}
+                    {%else%}
+                        {{project.description}}
+                    {%endif%}
                 </div>
             </div>
 
