@@ -1,8 +1,8 @@
 export PIPENV_VERBOSITY=-1
 
 deps:
+	pipenv sync
 	pipenv update
-	pipenv lock -r > requirements.txt
 
 run:
 	gunicorn -c config/gunicorn.py website.wsgi

@@ -12,6 +12,7 @@ pillow = "*"
 django-phonenumber-field = "*"
 django-ckeditor = "*"
 django-3-jet = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
