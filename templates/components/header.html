@@ -97,13 +97,13 @@
               id="menu-item-16"
               class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-16"
             >
-              <a href="/about" itemprop="url">{{titles.about}}</a>
+              <a href="{% url 'about' %}" itemprop="url">{{titles.about}}</a>
             </li>
             <li
               id="menu-item-16"
               class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-16"
             >
-              <a href="/contact" itemprop="url">{{titles.contacts}}</a>
+              <a href="{% url 'contact' %}" itemprop="url">{{titles.contacts}}</a>
             </li>
           </ul>
         </nav>
@@ -151,10 +151,10 @@
               <ul class="list-inline">
                 {% if request.session.language == 'ua' %}
                   <li class="list-inline-item"><a class="social-icon text-xs-center" style="margin:0;" href="{% url 'translate_ua' %}" id="lang-ua"><b>UA</b></a></li>
-                  <li class="list-inline-item" style="margin:0;"><a class="social-icon text-xs-center" style="margin:0;" href="{% url 'translate_en' %}" id "lang-eng">ENG</a></li>
+                  <li class="list-inline-item" style="margin:0;"><a class="social-icon text-xs-center" style="margin:0;" href="{% url 'translate_en' %}" id="lang-eng">ENG</a></li>
                 {% else %}
-                  <li class="list-inline-item"><a class="social-icon text-xs-center" style="margin:0;" href="{% url 'translate_ua' %}" id="lang-ua">UA</b></a></li>
-                  <li class="list-inline-item" style="margin:0;"><a class="social-icon text-xs-center" style="margin:0;" href="{% url 'translate_en' %}" id "lang-eng"><b>ENG</b></a></li>
+                  <li class="list-inline-item"><a class="social-icon text-xs-center" style="margin:0;" href="{% url 'translate_ua' %}" id="lang-ua">UA</a></li>
+                  <li class="list-inline-item" style="margin:0;"><a class="social-icon text-xs-center" style="margin:0;" href="{% url 'translate_en' %}" id="lang-eng"><b>ENG</b></a></li>
                 {% endif %}
               </ul>
           </div>

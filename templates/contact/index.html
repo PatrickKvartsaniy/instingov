@@ -1,7 +1,7 @@
 {% extends 'components/base.html'%}
 
 {%block content%}
-    {% include 'components/hero.html' %}
+    {% include 'components/hero.html' with hero_title=titles.contacts %}
     <div id="page" class="site" style="transform: none;">
         <div id="content" class="site-content" style="transform: none;">
             <div id="primary" class="content-area" style="transform: none;">

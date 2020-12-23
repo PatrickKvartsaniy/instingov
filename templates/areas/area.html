@@ -4,7 +4,7 @@
 {%block content%}
 <div id="content" class="site-content" style="transform: none;">
 
-    {% include 'components/hero.html' with hero_image_url=area.image.url %}
+    {% include 'components/hero.html' with hero_image_url=area.image.url hero_title=area.title %}
     <div id="primary" class="content-area" style="transform: none;">
         <main id="main" class="site-main" style="transform: none; line-height: 2.5;">
             <div class="penci-container" style="transform: none;">
@@ -13,7 +13,7 @@
 
                     <div style="margin-left: 70px;">
                         <div class="theiaStickySidebar"
-                                style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
+                                style="padding-top: 0; padding-bottom: 1px; position: static; transform: none;">
                             {% comment %} @include('site.blog.post.sidebar.elements.series') {% endcomment %}
                         </div>
                     </div>
@@ -33,7 +33,6 @@
                     </h4>
                 </div>
             </div>         
-        </div>
         </main>
     </div><!-- #primary -->
 </div><!-- #content -->
