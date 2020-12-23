@@ -3,18 +3,15 @@ from django.contrib.auth.models import User
 
 from phonenumber_field.modelfields import PhoneNumberField
 
-class Contact(models.Model):
-    adress = models.CharField(max_length=50, null=True)
-    phone = PhoneNumberField()
-    email = models.EmailField(max_length=254)
-    contact_person = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.adress
 
 class UserProfile(models.Model):
+    phone = PhoneNumberField(null=True, blank=True)
+    email = models.EmailField(max_length=254, null=True, blank=True)
+    facebook = models.CharField(max_length=50, null=True, blank=True)
+    linkedin = models.CharField(max_length=50, null=True, blank=True)
+    twitter = models.CharField(max_length=50, null=True, blank=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    photo = models.ImageField(upload_to='uploaded/users',blank=True, null=True)
+    photo = models.ImageField(upload_to='uploaded/users', blank=True, null=True)
     title = models.CharField(max_length=50)
 
     def __str__(self):

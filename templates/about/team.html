@@ -1,4 +1,87 @@
-{% extends 'components/base.html'%}
+                                                        <div class="penci-page-header-inner penci-container-1170"
+                                                             style="max-width: 100%;">
+                                                            <div id="penci_image_box__27013472"
+                                                                 class="penci-block-vc penci-team_memebers  columns-3 penci-team_member-s1 style-title-1 style-title-left penci-link-filter-hidden penci-empty-block-title penci-vc-column-3">
+                                                                <div class="penci-block-heading">
+                                                                </div>
+                                                                <div class="penci-block_content">
+                                                                    <div class="penci-image-box__content">
+                                                                        <div class="team_member_items penci-row">
+                                                                                {% for person in team %}
+                                                                                    <div class="penci-team_member_item penci-col-3">
+                                                                                        <div style="min-height: 380px;"
+                                                                                             class="penci-team_item__content">
+                                                                                            <img class="penci-team_member-img penci-lazy"
+                                                                                                 src="{{profuke.photo.url}}"
+                                                                                                 alt="{{profile.user.first_name}}"
+                                                                                                 style="display: inline-block;">
 
-{%block content%}
-{% endblock %}
+                                                                                            <div class="penci-team_item__info">
+                                                                                                <h5 class="penci-team_member_name">{{profile.user.first_name}} {{profile.user.last_name}}</h5>
+                                                                                                <div class="penci-team_member_pos">{{profile.title}}</div>
+                                                                                            </div>
+                                                                                            <div class="penci-team_member_socails"
+                                                                                                 style="min-height: 41px;">
+                                                                                                <a class="email_field"
+                                                                                                   href="mailto:{{profile.user.email}}">{{profile.user.email}}</a>
+                                                                                                <a class="phone_field"
+                                                                                                   href="tel:{{profile.phone}}">{{profile.phone}}</a>
+                                                                                            </div>
+                                                                                            <br>
+                                                                                            <div class="penci-team_member_socails" style="min-height: 32px;">
+                                                                                                @if(isset($teamMember['facebook']) && !empty($teamMember['facebook']))
+                                                                                                    <a target="_blank"
+                                                                                                       rel="noopener"
+                                                                                                       class="penci-team_member_social"
+                                                                                                       href="{{$teamMember['facebook']}}">
+                                                                                                        <i class="fa fa-facebook"></i>
+                                                                                                    </a>
+                                                                                                @endif
+                                                                                                    @if(isset($teamMember['twitter']) && !empty($teamMember['twitter']))
+                                                                                                    <a target="_blank"
+                                                                                                       rel="noopener"
+                                                                                                       class="penci-team_member_social"
+                                                                                                       href="{{$teamMember['twitter']}}">
+                                                                                                        <i class="fa fa-twitter"></i>
+                                                                                                    </a>
+                                                                                                @endif
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                {% endfor %}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <style>#penci_image_box__27013472 .penci-team_member_name {
+                                                                font-weight: 400;
+                                                            }
+
+                                                            @media screen and (min-width: 768px ) {
+                                                                #penci_image_box__27013472 .penci-team_member_name {
+                                                                    font-size: 18px !important;
+                                                                }
+                                                            }
+
+                                                            #penci_image_box__27013472.penci-team_memebers .penci-team_item__content:before {
+                                                                opacity: 1;
+                                                            }
+
+                                                            #penci_image_box__27013472 .penci-team_member-img {
+                                                                height: 180px;
+                                                                width: 180px;
+                                                            }
+
+                                                            #penci_image_box__27013472 .penci-team_member-img {
+                                                                /*border-radius: 50%;*/
+                                                            }
+
+                                                            #penci_image_box__27013472 .penci-team_member_name {
+                                                                margin-top: 20px;
+                                                            }</style>
+                                                        <div class="vc_empty_space" style="height: 40px"><span
+                                                                    class="vc_empty_space_inner"></span></div>
+                                                    </div>
