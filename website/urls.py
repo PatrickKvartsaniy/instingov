@@ -14,4 +14,3 @@ urlpatterns = [
     path('contact/', include('website.apps.contact.urls')),
     path('news/', include('website.apps.news.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-

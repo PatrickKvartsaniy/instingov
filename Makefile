@@ -10,5 +10,5 @@ run:
 container:
 	docker build .
 
-static:
+statics:
 	python manage.py collectstatic
