@@ -7,3 +7,4 @@ from .models import UserProfile
 class UserProfileAdmin(admin.ModelAdmin):
     class Meta:
         model = UserProfile
+

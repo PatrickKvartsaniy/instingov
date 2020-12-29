@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'y46q5j0rye73(d-35_801a#cm*6h8m4619ag1noq^ie0hr9$1q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["0.0.0.0", "127.0.0.1", "instingov.org", "104.248.23.8"]
 # ALLOWED_HOSTS = ["*"]
@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'website.apps.areas',
     'website.apps.contact',
     'website.apps.main',
-    'website.apps.news'
+    'website.apps.news',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,5 @@ MEDIA_URL = 'images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+CKEDITOR_UPLOAD_PATH = 'images/uploads/'
