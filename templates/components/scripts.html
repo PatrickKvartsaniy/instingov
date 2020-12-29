@@ -63,7 +63,7 @@
 <!-- Sidebar Graph - END -->
 
 <script>
-  var PENCILOCALIZE = {
+  const PENCILOCALIZE = {
     ajaxUrl:
       "http:\/\/pennews.pencidesign.com\/pennews-web-hosting-service-multipurpose\/wp-admin\/admin-ajax.php",
     errorMsg: "Something wrong happened. Please try again.",
@@ -81,10 +81,10 @@
 
 <script>
   function this_count_value(_this) {
-    var parent = $(_this).closest("section");
-    var spanHtml = parent.find(".inp_count_value");
-    var this_count_value = $(_this).val().length;
-    var max_value = $(_this).attr("max");
+    const parent = $(_this).closest("section");
+    const spanHtml = parent.find(".inp_count_value");
+    const this_count_value = $(_this).val().length;
+    const max_value = $(_this).attr("max");
 
     spanHtml.text(this_count_value);
   }

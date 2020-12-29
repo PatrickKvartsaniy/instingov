@@ -19,4 +19,3 @@ class AreaAdminForm(forms.ModelForm):
 @admin.register(Area)
 class AreaAdmin(admin.ModelAdmin):
     form = AreaAdminForm
-

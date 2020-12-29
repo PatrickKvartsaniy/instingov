@@ -222,14 +222,14 @@ body, button, input, select, textarea, .woocommerce ul.products li.product .butt
 }
 
 .penci-portfolio-wrap {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .penci-portfolio-wrap .portfolio-item {
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-bottom: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
 }
 
 .penci-menu-hbg-widgets .menu-hbg-title {

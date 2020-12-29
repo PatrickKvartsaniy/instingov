@@ -6,18 +6,13 @@
 <div class="hero">
     <div class="hero-inner wrap">
         <div class="hero__picture-outer" style="background-color:#b3cde0;">
-        {% if hero_image_url %}
-            <img style="width: 100%; height: 100%; object-fit: contain;" src="{{hero_image_url}}">
+        {% if hero_image %}
+            <img style="width: 100%; height: 100%; object-fit: contain;" src="{{hero_image.url}}">
         {% else %}
             <img style="width: 100%; height: 125%; object-fit: contain;" src="{% static '/images/main2.png' %}">
         {% endif %}
         </div>
         <div class="hero__content">
-            <div class="hero__content__headline" data-ref="hero.headline" style="opacity: 1; ">
-            </div>
-            <h1 class="hero__content__title" data-ref="hero.title" style="opacity: 1;">
-                {{ hero_title }}
-            </h1>
         </div>
     </div>
 </div>

@@ -4,7 +4,7 @@
 {%block content%}
 <div id="content" class="site-content" style="transform: none;">
 
-    {% include 'components/hero.html' with hero_image_url=area.image.url hero_title=area.title %}
+    {% include 'components/hero.html' with hero_image=area.image%}
     <div id="primary" class="content-area" style="transform: none;">
         <main id="main" class="site-main" style="transform: none; line-height: 2.5;">
             <div class="penci-container" style="transform: none;">
@@ -20,9 +20,11 @@
                 </aside> 
                 <div style="max-width: 750px; margin-left: 50px; margin-right: 50px; text-align: justify; color: #454545; font-size: 1.8rem;">
                     {% if request.session.language == 'ua'%}
-                        {{area.description_ua}}
+                        <h1>{{area.title_ua}}</h1>
+                        {{area.description_ua|safe}}
                     {%else%}
-                        {{area.description}}
+                         <h1>{{area.title}}</h1>
+                        {{area.description|safe}}
                     {%endif%}
                 </div>
             </div>
