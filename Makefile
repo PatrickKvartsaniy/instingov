@@ -7,6 +7,9 @@ deps:
 run:
 	gunicorn -c config/gunicorn.py website.wsgi
 
+daemon:
+	gunicorn -c config/gunicorn.py website.wsgi --daemon
+
 container:
 	docker build .
 

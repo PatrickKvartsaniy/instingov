@@ -2,3 +2,4 @@
 .idea
 staticfiles
 requirements.txt
+db.sqlite3
