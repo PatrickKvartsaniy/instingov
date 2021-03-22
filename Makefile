@@ -5,13 +5,17 @@ deps:
 	pipenv update
 
 run:
-	gunicorn -c config/gunicorn.py website.wsgi
+	pipenv run gunicorn -c config/gunicorn.py website.wsgi
 
 daemon:
-	gunicorn -c config/gunicorn.py website.wsgi --daemon
+	pipenv run gunicorn -c config/gunicorn.py website.wsgi --daemon
 
 container:
 	docker build .
 
 statics:
-	python manage.py collectstatic
+	pipenv run python manage.py collectstatic
+
+migrate:
+	pipenv run python manage.py makemigrations
+	pipenv run python manage.py migrate
